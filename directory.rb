@@ -1,39 +1,42 @@
-student_count = 32
+#lets puts all students into an array
+students = ["Enrique Comba Riepenhausen",
+"Stephen Llolyd",
+"Alex Peattle",
+"Vic 329",
+"Nicole Pell",
+"Bernard",
+"Elena Garrone",
+"Yvette Cook",
+"Stephen Giles",
+"Ana Isabel Nogal",
+"Craigh 44",
+"Tim Scully",
+"Ella Schofield",
+"Fadie H",
+"Mala 23",
+"Zrasool88",
+"Galicians",
+"Dan Jocutler",
+"Camilla Van Klinken",
+"Sandrine",
+"James Ascarter",
+"Sl Stevens",
+"Schlap",
+"Andrew Hercules",
+"Karine Nielsen",
+"Andrew Snead",
+"Rachel Nolan",
+"Galalag",
+"Anna Schechter",
+"Alex Fakhri",
+"Denise",
+"Andrew Harrison"]
 #first we print the list of students
 puts "The students of the September 2014 cohort at Makers Academy"
-
 puts "-----------------------------------------------------------"
-puts "Enrique Comba Riepenhausen"
-puts "Stephen Llolyd"
-puts "Alex Peattle"
-puts "Vic 329"
-puts "Nicole Pell"
-puts "Bernard"
-puts "Elena Garrone"
-puts "Yvette Cook"
-puts "Stephen Giles"
-puts "Ana Isabel Nogal"
-puts "Craigh 44"
-puts "Tim Scully"
-puts "Ella Schofield"
-puts "Fadie H"
-puts "Mala 23"
-puts "Zrasool88"
-puts "Galicians"
-puts "Dan Jocutler"
-puts "Camilla Van Klinken"
-puts "Sandrine"
-puts "James Ascarter"
-puts "Sl Stevens"
-puts "Schlap"
-puts "Andrew Hercules"
-puts "Karine Nielsen"
-puts "Andrew Snead"
-puts "Rachel Nolan"
-puts "Galalag"
-puts "Anna Schechter"
-puts "Alex Fakhri"
-puts "Denise"
-puts "Andrew Harrison"
+
+students.each do |student| 
+	puts student
+end
 #finally, we print the total
-puts "Overall, we have #{student_count} phenomenal students!"
+puts "Overall, we have #{students.length} phenomenal students!"
