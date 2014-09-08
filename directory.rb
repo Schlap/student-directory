@@ -33,3 +33,7 @@ puts "Anna Schechter"
 puts "Alex Fakhri"
 puts "Denise"
 puts "Andrew Harrison"
+
+print "Overall, we have "
+print 32
+puts " phenomenal students!"
