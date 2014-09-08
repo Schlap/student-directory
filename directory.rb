@@ -1,36 +1,37 @@
 #lets puts all students into an array
-students = ["Enrique Comba Riepenhausen",
-"Stephen Llolyd",
-"Alex Peattle",
-"Vic 329",
-"Nicole Pell",
-"Bernard",
-"Elena Garrone",
-"Yvette Cook",
-"Stephen Giles",
-"Ana Isabel Nogal",
-"Craigh 44",
-"Tim Scully",
-"Ella Schofield",
-"Fadie H",
-"Mala 23",
-"Zrasool88",
-"Galicians",
-"Dan Jocutler",
-"Camilla Van Klinken",
-"Sandrine",
-"James Ascarter",
-"Sl Stevens",
-"Schlap",
-"Andrew Hercules",
-"Karine Nielsen",
-"Andrew Snead",
-"Rachel Nolan",
-"Galalag",
-"Anna Schechter",
-"Alex Fakhri",
-"Denise",
-"Andrew Harrison"]
+students = [
+{:name => "Enrique Comba Riepenhausen", :cohort => :september},
+{:name => "Stephen Llolyd", :cohort => :september},
+{:name => "Alex Peattle", :cohort => :september},
+{:name => "Vic 329", :cohort => :september},
+{:name => "Nicole Pell", :cohort => :september},
+{:name => "Bernard", :cohort => :september},
+{:name => "Elena Garrone", :cohort => :september},
+{:name => "Yvette Cook", :cohort => :september},
+{:name => "Stephen Giles", :cohort => :september},
+{:name => "Ana Isabel Nogal", :cohort => :september},
+{:name => "Craigh 44", :cohort => :september},
+{:name => "Tim Scully", :cohort => :september},
+{:name => "Ella Schofield", :cohort => :september},
+{:name => "Fadie H", :cohort => :september},
+{:name => "Mala 23", :cohort => :september},
+{:name => "Zrasool88", :cohort => :september},
+{:name => "Galicians", :cohort => :september},
+{:name => "Dan Jocutler", :cohort => :september},
+{:name => "Camilla Van Klinken", :cohort => :september},
+{:name => "Sandrine", :cohort => :september},
+{:name => "James Ascarter", :cohort => :september},
+{:name => "Sl Stevens", :cohort => :september},
+{:name => "Schlap", :cohort => :september},
+{:name => "Andrew Hercules", :cohort => :september},
+{:name => "Karine Nielsen", :cohort => :september},
+{:name => "Andrew Snead", :cohort => :september},
+{:name => "Rachel Nolan", :cohort => :september},
+{:name => "Galalag", :cohort => :september},
+{:name => "Anna Schechter", :cohort => :september},
+{:name => "Alex Fakhri", :cohort => :september},
+{:name => "Denise", :cohort => :september},
+{:name => "Andrew Harrison", :cohort => :september}]
 #print title using method
 
 def print_header 
@@ -38,16 +39,16 @@ def print_header
 	puts "-----------------------------------------------------------"
 end
 
-def print_names(names)
-	names.each do |name| 
-		puts name
+def print(students)
+	students.each do |student| 
+		puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
-def print_footer(names)
-	puts "Overall, we have #{names.length} phenomenal students!"
+def print_footer(students)
+	puts "Overall, we have #{students.length} phenomenal students!"
 end
-#nothing happens until we call the methods
+
 print_header
-print_names(students)
+print(students)
 print_footer(students)
