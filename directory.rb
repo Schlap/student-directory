@@ -47,7 +47,7 @@ def process(selection)
 	case selection
 		#3. do what the user has asked
 		when "1"
-			students = input_students
+			input_students
 		when "2"
 			show_students
 		when "9"
@@ -58,7 +58,6 @@ def process(selection)
 end
 
 def interactive_menu
-	students = []
 	loop do 
 		print_menu
 		process(gets.chomp)
