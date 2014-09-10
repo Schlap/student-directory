@@ -1,30 +1,34 @@
 
+
 @students = [] # an empty array accessblie to all methods
-def print_header 
-	puts 'The students of the September 2014 cohort at Makers Academy'
-	puts "-----------------------------------------------------------"
+def print_header
+	print "\nThe students of the September 2014 cohort at Makers Academy\n"
+	print "-----------------------------------------------------------\n"
 end
 
+
 def print_students_list
-	@students.each do |student|
-		puts "#{student[:name]} (#{student[:cohort]} cohort)"
+	@students.each_with_index do |student, index|
+		print "\n#{index+1}. #{student[:name]} (#{student[:cohort]} cohort)\n"
 	end
 end
 
 def print_footer
-	puts "Overall, we have #{@students.length} phenomenal students!"
+	print "\nOverall, we have #{@students.length} phenomenal students!"
+	print "\n"
 end
 
 def input_students
-	puts "Please enter the names of the students"
-	puts "To finish just hit return twice"
+	print "\n"
+	print "Please enter the name of the student\n"
+	print "To finish just hit return twice\n"
 #get the first name
 name = STDIN.gets.chomp
 #while the name is not empty, repeat this code
 while !name.empty? do 
 	#add the student hash to the array
 	@students << {:name => name, :cohort => :september}
-	puts "Now we have #{@students.length} students"
+	print "\nNow we have #{@students.length} students\n"
 	#get another name from the user
 	name = STDIN.gets.chomp
 	end
@@ -32,6 +36,7 @@ end
 
 def print_menu
 	# 1. print the menu and ask the user what to do
+		print "\n"
 		puts "1. Input the students"
 		puts "2. Show the students"
 		puts "3. Save the list to students.csv"
